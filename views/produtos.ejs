@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossos Produtos</title>
+    <style>
+        body { background-color: #121212; color: white; font-family: sans-serif; padding: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; border: 1px solid #333; text-align: center; }
+        .preco { color: #D4AF37; font-weight: bold; font-size: 20px; }
+        .btn-comprar { background: #D4AF37; color: black; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Vitrine de Produtos 🛒</h1>
+    <div class="grid">
+        <% lista.forEach(produto => { %>
+            <div class="card">
+                <h3><%= produto.nome %></h3>
+                <p class="preco">R$ <%= produto.preco %></p>
+                <button class="btn-comprar">Adicionar ao Carrinho</button>
+            </div>
+        <% }) %>
+    </div>
+    <br>
+    <a href="/" style="color: #aaa;">Voltar para Home</a>
+</body>
+</html>
