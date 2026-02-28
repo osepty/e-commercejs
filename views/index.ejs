@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Bem-vindo à <%= nomeLoja %></h1>
-    <p>O seu e-commerce em Node.js está ganhando forma!</p>
-    
-    <a href="/produtos">Ver Produtos</a>
+    <%- include('partials/header') %>
+    <div class="container" style="text-align: center; margin-top: 10vh;">
+        <div style="font-size: 5rem;">🚀</div>
+        <h1><%= nomeLoja %></h1>
+        <p style="color: #8892b0; font-size: 1.2rem;">A melhor tecnologia a um clique de distância.</p>
+        
+        <a href="/produtos" class="btn">Explorar Vitrine</a>
+        
+    </div>
 </body>
 </html>
